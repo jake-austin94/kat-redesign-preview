@@ -33,7 +33,14 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you clean buildings over 3 storeys?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. KAT Window Cleaning handles all manner of commercial work, including buildings of 3 storeys and above. Get in touch with the details and we will advise."}}, {"@type": "Question", "name": "Are you insured?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, KAT Window Cleaning carries full public liability insurance."}}, {"@type": "Question", "name": "Can you look after lots of properties for us?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Landlords, letting agents and organisations that look after many homes can have every property cleaned on a regular schedule, with electronic invoicing."}}, {"@type": "Question", "name": "Do you clean new builds?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We clean windows on new builds before handover, including large bespoke projects such as our work for Clayland Estates."}}, {"@type": "Question", "name": "How do invoicing and payment work?", "acceptedAnswer": {"@type": "Answer", "text": "We send electronic invoices, and accept online and cash payments."}}, {"@type": "Question", "name": "How do I get a quote?", "acceptedAnswer": {"@type": "Answer", "text": "Use the commercial quote form, call 07932 008040, or send us photos of the building. We can also arrange a free site visit."}}]}</script>
 </head>
 <body class="page-commercial">
-<div style="background:#f5b301;color:#25323f;text-align:center;font:600 15px/1.4 Barlow,Arial,sans-serif;padding:8px 12px;">Preview of the new KAT Window Cleaning website. Not live yet, so the quote form won&#39;t send.</div>
+<div class="preview-bar" style="background:#f5b301;color:#25323f;text-align:center;font:600 15px/1.4 Barlow,Arial,sans-serif;padding:8px 12px;">Preview of the new KAT Window Cleaning website. Not live yet, so the quote form won&#39;t send.
+<span style="display:block;margin-top:6px;font-weight:500;">Hero style:
+<a data-hero-pick="shade" href="./?hero=shade" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">1 Side shade</a>
+<a data-hero-pick="glass" href="./?hero=glass" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">2 Glass panel</a>
+<a data-hero-pick="tint" href="./?hero=tint" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">3 Full tint</a></span></div>
+<script>(function(){var k="kat-hero",v=new URLSearchParams(location.search).get("hero");try{if(v)localStorage.setItem(k,v);else v=localStorage.getItem(k);}catch(e){}
+document.addEventListener("DOMContentLoaded",function(){var h=document.querySelector("[data-hero]");if(h&&/^(shade|glass|tint)$/.test(v||""))h.setAttribute("data-hero",v);var cur=h?h.getAttribute("data-hero"):v||"shade";
+document.querySelectorAll("[data-hero-pick]").forEach(function(a){if(a.getAttribute("data-hero-pick")===cur){a.style.background="#25323f";a.style.color="#fff";}});});})();</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -120,6 +127,15 @@
       </div>
     </div>
     <form class="kat-contact-form form" action="https://foner.app.n8n.cloud/webhook/kat-contact-form-v2-9d41a7e3" method="POST" data-page="Commercial page">
+      <div class="field-row">
+        <div class="field"><label for="nm-commercial-page">Your name</label><input id="nm-commercial-page" name="Name" autocomplete="name" required></div>
+        <div class="field"><label for="ph-commercial-page">Phone <span class="optional">(optional)</span></label><input id="ph-commercial-page" type="tel" name="PhoneNumber" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="em-commercial-page">Email</label><input id="em-commercial-page" type="email" name="Email" autocomplete="email" required></div>
+      <div class="field-row">
+        <div class="field"><label for="hn-commercial-page">House or building number/name</label><input id="hn-commercial-page" name="houseNumber" autocomplete="address-line1" required></div>
+        <div class="field"><label for="pc-commercial-page">Postcode</label><input id="pc-commercial-page" name="postcode" autocomplete="postal-code" required pattern="[A-Za-z]{1,2}[0-9][A-Za-z0-9]?\s*[0-9][A-Za-z]{2}" title="Please enter a full UK postcode, for example IP25 6AB" autocapitalize="characters"></div>
+      </div>
       <fieldset class="field services-pick" data-services>
         <legend>What do you need? <span class="optional">Tick all that apply</span></legend>
         <div class="check-grid"><label class="check"><input type="checkbox" name="services" value="Window cleaning"><span>Window cleaning</span></label><label class="check"><input type="checkbox" name="services" value="Commercial window cleaning" checked><span>Commercial window cleaning</span></label><label class="check"><input type="checkbox" name="services" value="Gutter clearance"><span>Gutter clearance</span></label><label class="check"><input type="checkbox" name="services" value="Solar panel cleaning"><span>Solar panel cleaning</span></label><label class="check"><input type="checkbox" name="services" value="Something else"><span>Something else</span></label></div>
@@ -133,15 +149,6 @@
           <div class="field"><label for="fq-commercial-page">How often?</label><select id="fq-commercial-page" name="frequency"><option value="">Choose one</option><option>Weekly</option><option>Monthly</option><option>Every 2 months</option><option>One-off clean</option><option>Not sure yet</option></select></div>
         </div>
       </fieldset>
-      <div class="field-row">
-        <div class="field"><label for="nm-commercial-page">Your name</label><input id="nm-commercial-page" name="Name" autocomplete="name" required></div>
-        <div class="field"><label for="ph-commercial-page">Phone <span class="optional">(optional)</span></label><input id="ph-commercial-page" type="tel" name="PhoneNumber" autocomplete="tel"></div>
-      </div>
-      <div class="field"><label for="em-commercial-page">Email</label><input id="em-commercial-page" type="email" name="Email" autocomplete="email" required></div>
-      <div class="field-row">
-        <div class="field"><label for="hn-commercial-page">House or building number/name</label><input id="hn-commercial-page" name="houseNumber" autocomplete="address-line1" required></div>
-        <div class="field"><label for="pc-commercial-page">Postcode</label><input id="pc-commercial-page" name="postcode" autocomplete="postal-code" required pattern="[A-Za-z]{1,2}[0-9][A-Za-z0-9]?\s*[0-9][A-Za-z]{2}" title="Please enter a full UK postcode, for example IP25 6AB" autocapitalize="characters"></div>
-      </div>
       <div class="field"><label for="ms-commercial-page">What would you like cleaned?</label><textarea id="ms-commercial-page" name="Message" rows="4" required></textarea></div>
       <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <button class="btn btn-solid btn-wide" type="submit">Send my enquiry</button>

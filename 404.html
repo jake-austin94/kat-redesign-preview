@@ -30,7 +30,14 @@
   
 </head>
 <body class="page-404">
-<div style="background:#f5b301;color:#25323f;text-align:center;font:600 15px/1.4 Barlow,Arial,sans-serif;padding:8px 12px;">Preview of the new KAT Window Cleaning website. Not live yet, so the quote form won&#39;t send.</div>
+<div class="preview-bar" style="background:#f5b301;color:#25323f;text-align:center;font:600 15px/1.4 Barlow,Arial,sans-serif;padding:8px 12px;">Preview of the new KAT Window Cleaning website. Not live yet, so the quote form won&#39;t send.
+<span style="display:block;margin-top:6px;font-weight:500;">Hero style:
+<a data-hero-pick="shade" href="/kat-redesign-preview/?hero=shade" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">1 Side shade</a>
+<a data-hero-pick="glass" href="/kat-redesign-preview/?hero=glass" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">2 Glass panel</a>
+<a data-hero-pick="tint" href="/kat-redesign-preview/?hero=tint" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">3 Full tint</a></span></div>
+<script>(function(){var k="kat-hero",v=new URLSearchParams(location.search).get("hero");try{if(v)localStorage.setItem(k,v);else v=localStorage.getItem(k);}catch(e){}
+document.addEventListener("DOMContentLoaded",function(){var h=document.querySelector("[data-hero]");if(h&&/^(shade|glass|tint)$/.test(v||""))h.setAttribute("data-hero",v);var cur=h?h.getAttribute("data-hero"):v||"shade";
+document.querySelectorAll("[data-hero-pick]").forEach(function(a){if(a.getAttribute("data-hero-pick")===cur){a.style.background="#25323f";a.style.color="#fff";}});});})();</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">

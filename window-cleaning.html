@@ -33,7 +33,14 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often should I have my windows cleaned?", "acceptedAnswer": {"@type": "Answer", "text": "Most homes have their windows cleaned monthly. One-off cleans are available too, just let us know what suits you."}}, {"@type": "Question", "name": "Do you clean the frames and sills too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Frames and sills are cleaned on every visit, not just the glass."}}, {"@type": "Question", "name": "Will I know when you are coming?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You'll get a reminder the day before each clean with a time slot, and a message when it's done."}}]}</script>
 </head>
 <body class="page-window">
-<div style="background:#f5b301;color:#25323f;text-align:center;font:600 15px/1.4 Barlow,Arial,sans-serif;padding:8px 12px;">Preview of the new KAT Window Cleaning website. Not live yet, so the quote form won&#39;t send.</div>
+<div class="preview-bar" style="background:#f5b301;color:#25323f;text-align:center;font:600 15px/1.4 Barlow,Arial,sans-serif;padding:8px 12px;">Preview of the new KAT Window Cleaning website. Not live yet, so the quote form won&#39;t send.
+<span style="display:block;margin-top:6px;font-weight:500;">Hero style:
+<a data-hero-pick="shade" href="./?hero=shade" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">1 Side shade</a>
+<a data-hero-pick="glass" href="./?hero=glass" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">2 Glass panel</a>
+<a data-hero-pick="tint" href="./?hero=tint" style="color:#25323f;margin:0 4px;padding:2px 8px;border:1.5px solid #25323f;border-radius:4px;text-decoration:none;white-space:nowrap;">3 Full tint</a></span></div>
+<script>(function(){var k="kat-hero",v=new URLSearchParams(location.search).get("hero");try{if(v)localStorage.setItem(k,v);else v=localStorage.getItem(k);}catch(e){}
+document.addEventListener("DOMContentLoaded",function(){var h=document.querySelector("[data-hero]");if(h&&/^(shade|glass|tint)$/.test(v||""))h.setAttribute("data-hero",v);var cur=h?h.getAttribute("data-hero"):v||"shade";
+document.querySelectorAll("[data-hero-pick]").forEach(function(a){if(a.getAttribute("data-hero-pick")===cur){a.style.background="#25323f";a.style.color="#fff";}});});})();</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -113,6 +120,15 @@
       </div>
     </div>
     <form class="kat-contact-form form" action="https://foner.app.n8n.cloud/webhook/kat-contact-form-v2-9d41a7e3" method="POST" data-page="Window Cleaning page">
+      <div class="field-row">
+        <div class="field"><label for="nm-window-cleaning-page">Your name</label><input id="nm-window-cleaning-page" name="Name" autocomplete="name" required></div>
+        <div class="field"><label for="ph-window-cleaning-page">Phone <span class="optional">(optional)</span></label><input id="ph-window-cleaning-page" type="tel" name="PhoneNumber" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="em-window-cleaning-page">Email</label><input id="em-window-cleaning-page" type="email" name="Email" autocomplete="email" required></div>
+      <div class="field-row">
+        <div class="field"><label for="hn-window-cleaning-page">House or building number/name</label><input id="hn-window-cleaning-page" name="houseNumber" autocomplete="address-line1" required></div>
+        <div class="field"><label for="pc-window-cleaning-page">Postcode</label><input id="pc-window-cleaning-page" name="postcode" autocomplete="postal-code" required pattern="[A-Za-z]{1,2}[0-9][A-Za-z0-9]?\s*[0-9][A-Za-z]{2}" title="Please enter a full UK postcode, for example IP25 6AB" autocapitalize="characters"></div>
+      </div>
       <fieldset class="field services-pick" data-services>
         <legend>What do you need? <span class="optional">Tick all that apply</span></legend>
         <div class="check-grid"><label class="check"><input type="checkbox" name="services" value="Window cleaning" checked><span>Window cleaning</span></label><label class="check"><input type="checkbox" name="services" value="Commercial window cleaning"><span>Commercial window cleaning</span></label><label class="check"><input type="checkbox" name="services" value="Gutter clearance"><span>Gutter clearance</span></label><label class="check"><input type="checkbox" name="services" value="Solar panel cleaning"><span>Solar panel cleaning</span></label><label class="check"><input type="checkbox" name="services" value="Something else"><span>Something else</span></label></div>
@@ -126,15 +142,6 @@
           <div class="field"><label for="fq-window-cleaning-page">How often?</label><select id="fq-window-cleaning-page" name="frequency"><option value="">Choose one</option><option>Weekly</option><option>Monthly</option><option>Every 2 months</option><option>One-off clean</option><option>Not sure yet</option></select></div>
         </div>
       </fieldset>
-      <div class="field-row">
-        <div class="field"><label for="nm-window-cleaning-page">Your name</label><input id="nm-window-cleaning-page" name="Name" autocomplete="name" required></div>
-        <div class="field"><label for="ph-window-cleaning-page">Phone <span class="optional">(optional)</span></label><input id="ph-window-cleaning-page" type="tel" name="PhoneNumber" autocomplete="tel"></div>
-      </div>
-      <div class="field"><label for="em-window-cleaning-page">Email</label><input id="em-window-cleaning-page" type="email" name="Email" autocomplete="email" required></div>
-      <div class="field-row">
-        <div class="field"><label for="hn-window-cleaning-page">House or building number/name</label><input id="hn-window-cleaning-page" name="houseNumber" autocomplete="address-line1" required></div>
-        <div class="field"><label for="pc-window-cleaning-page">Postcode</label><input id="pc-window-cleaning-page" name="postcode" autocomplete="postal-code" required pattern="[A-Za-z]{1,2}[0-9][A-Za-z0-9]?\s*[0-9][A-Za-z]{2}" title="Please enter a full UK postcode, for example IP25 6AB" autocapitalize="characters"></div>
-      </div>
       <div class="field"><label for="ms-window-cleaning-page">What would you like cleaned?</label><textarea id="ms-window-cleaning-page" name="Message" rows="4" required></textarea></div>
       <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <button class="btn btn-solid btn-wide" type="submit">Send my enquiry</button>
